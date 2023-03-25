@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">Clientes</h1>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control" required autofocus />
+            </div>
+            <div>
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" class="form-control" maxlength="14" required />
+            </div>
+            <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Adicionar</button>
+        </form>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Conta</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-clientes">
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="../js/model/conta.js"></script>
+
+    <script src="../js/model/cliente.js"></script>
+    <script src="../js/model/clientes.js"></script>
+    <script src="../js/controller/cliente-controller.js"></script>
+    <script src="../js/app-clientes.js"></script>
+
+</body>
+
+</html>
